@@ -5,9 +5,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using Worker.DAL.Repositories.Interfaces;
 
-namespace Worker.DAL.Repositories
+namespace Worker.DAL.Repositories.Implementations
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {

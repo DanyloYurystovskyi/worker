@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
+using Worker.BLL.Mapper;
+using Worker.BLL.Mapper.Implementations;
 using Worker.DAL;
 using Worker.DAL.Entities;
 
@@ -37,6 +39,8 @@ namespace Worker
                 .AddEntityFrameworkStores<WorkerContext>();
 
             services.AddControllersWithViews();
+
+            services.AddTransient<IUserMapper, UserMapper>();
 
             services.AddSwaggerGen(c =>
             {
